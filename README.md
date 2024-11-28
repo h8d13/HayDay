@@ -62,3 +62,9 @@ epsilon = 0.02 * cv2.arcLength(largest, True)
 Then we can use cv2 built-in ```approx = cv2.approxPolyDP(largest, epsilon, True)``` 
 This is a complex algorithm but essentially will adapt the rectangle to fit the perspective of the game. 
 
+
+Note: 
+
+Having a uneven amount of tiles is essential (see screenshot above, 21 tiles works because the center will be accurate, while 24 tiles will not as the center will be ambiguous) but could be corrceted easily by using square closest to viewport. 
+
+
