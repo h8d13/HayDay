@@ -50,9 +50,16 @@ class SoilDetector
 
    ![alt text](https://github.com/h8d13/HayDay/blob/main/capcapcapcap.JPG)
 
+```
+contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+largest = max(contours, key=cv2.contourArea)
+epsilon = 0.02 * cv2.arcLength(largest, True)
+```
+
+
 3. **Shape matching**
 
-Then we can use cv2 built-in ```cv2.approxPolyDP``` 
+Then we can use cv2 built-in ```approx = cv2.approxPolyDP(largest, epsilon, True)``` 
 
 
 
