@@ -6,7 +6,7 @@ import os
 class TextureDetector:
     def __init__(self):
         self.screen_capture = mss.mss()
-        template_path = os.path.join(os.path.dirname(__file__), 'templates', 'soil.jpg')
+        template_path = os.path.join(os.path.dirname(__file__), 'templates', 'soil.jpg') # CASE SENSITIVE
         self.template = cv2.imread(template_path)
         
         if self.template is None:
