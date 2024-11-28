@@ -1,5 +1,5 @@
-# HayDay
-HayDayBot
+# HayDay Farm
+HayDay Bot Python
 
 I've create this for two reasons: 
 
