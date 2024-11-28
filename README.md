@@ -19,3 +19,7 @@ As per any automation problem we should break down the exercise:
 - Harvest
 - Repeat
   
+
+# Soil detection
+
+![alt text](https://github.com/h8d13/HayDay/soil.jpg?raw=true)
