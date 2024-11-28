@@ -115,7 +115,7 @@ This is horrible code example but hey, if it works...
                                     
 
                                 x, y = point
-                                pag.moveTo(cx+35,cy-20, duration=1) # Add slight offset to make sure we drag low enough for planting to begin
+                                pag.moveTo(cx+35,cy-20, duration=1) # Make sure we drag low enough for planting to begin
                                 steps = 50
                                 for i in range(steps):
                                     if self.paused:
