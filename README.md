@@ -35,9 +35,15 @@ To do this we can do a couple of things:
 How to do it: 
 
 ```
-def detect(self, screen):
-    diff = np.abs(screen - self.template_color)
-    current_mask = (np.mean(diff, axis=2) < self.color_threshold).astype(np.uint8) * 255
+class SoilDetector
+  def __init__(self):
+      template_path = os.path.join(os.path.dirname(__file__), 'templates', 'soil.JPG')
+      self.template = cv2.imread(template_path)
+      self.template_color = np.mean(self.template, axis=(0,1))
+      self.color_threshold = 15
+  def detect(self, screen):
+      diff = np.abs(screen - self.template_color)
+      current_mask = (np.mean(diff, axis=2) < self.color_threshold).astype(np.uint8) * 255
 ````
    
 2. **Thresholding/Masking/Countours**
