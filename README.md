@@ -24,5 +24,16 @@ As per any automation problem we should break down the exercise:
 
 ![alt text](https://github.com/h8d13/HayDay/blob/main/soil.JPG)
 
+As we determined above, the most important will be to detect the area the bot can use to grow crops. 
 
-![alt text](https://github.com/h8d13/HayDay/blob/main/capcapcap.JPG)
+To do this we can do a couple of things:
+
+1. Color
+   ![alt text](https://github.com/h8d13/HayDay/blob/main/capcapcap.JPG)
+2. Thresholding
+   
+
+Then shape extraction. And to confirm it all, we can finalize with a template match. 
+
+
+
