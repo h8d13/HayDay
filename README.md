@@ -32,11 +32,13 @@ To do this we can do a couple of things:
    
    ![alt text](https://github.com/h8d13/HayDay/blob/main/capcapcap.JPG)
    
-2. **Thresholding**
+2. **Thresholding/Masking**
 
    ![alt text](https://github.com/h8d13/HayDay/blob/main/capcapcapcap.JPG)
 
-Then shape extraction. And to confirm it all, we can finalize with a template match. 
+3. **Shape matching**
+
+Then we can use cv2 built-in ```cv2.approxPolyDP```
 
 
 
