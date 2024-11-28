@@ -28,9 +28,12 @@ As we determined above, the most important will be to detect the area the bot ca
 
 To do this we can do a couple of things:
 
-1. Color
+1. **Color**
+   
    ![alt text](https://github.com/h8d13/HayDay/blob/main/capcapcap.JPG)
-2. Thresholding
+   
+2. **Thresholding**
+
    ![alt text](https://github.com/h8d13/HayDay/blob/main/capcapcapcap.JPG)
 
 Then shape extraction. And to confirm it all, we can finalize with a template match. 
