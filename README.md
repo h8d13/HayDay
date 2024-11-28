@@ -189,3 +189,9 @@ Here is a preview in x16 speed.
 
 https://github.com/user-attachments/assets/61e6eb0d-7297-40b4-b07c-09263a126e35
 
+
+Hourly estimate coins: 2 000
+
+Just for fun :D
+This software is provided for educational and research purposes only. The use of this software to automate or modify behavior in third-party applications may violate their terms of service. The authors assume no responsibility for any misuse or legal consequences
+
