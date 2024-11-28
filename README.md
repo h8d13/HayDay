@@ -60,7 +60,5 @@ epsilon = 0.02 * cv2.arcLength(largest, True)
 3. **Shape matching**
 
 Then we can use cv2 built-in ```approx = cv2.approxPolyDP(largest, epsilon, True)``` 
-
-
-
+This is a complex algorithm but essentially will adapt the rectangle to fit the perspective of the game. 
 
