@@ -23,3 +23,5 @@ As per any automation problem we should break down the exercise:
 # Soil detection
 
 ![alt text](https://github.com/h8d13/HayDay/blob/main/soil.JPG)
+
+
