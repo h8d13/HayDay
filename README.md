@@ -7,7 +7,7 @@ I've create this for two reasons:
 2. It's a game to prays on your patience, so it's fun to automate.
 
 Finally, I will not provide the full automation script as it's against terms of service. 
-I will however, show the full work to get there. 
+I will however, show the full work to get there. Also thanks to @claritycoders for inspiration with the fishing bot. 
 
 As per any automation problem we should break down the exercise:
 
@@ -31,6 +31,8 @@ To do this we can do a couple of things:
 1. **Color**
    
    ![alt text](https://github.com/h8d13/HayDay/blob/main/capcapcap.JPG)
+
+How to do it: Load the template, get the color 
    
 2. **Thresholding/Masking/Countours**
 
