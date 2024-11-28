@@ -80,7 +80,7 @@ M01 represents the sum of all y-coordinates
 
 Dividing first order moments by zero order moment gives the average (center) position
 
-# Automation
+# Planting
 
 Well now that we have a reliable middle point you know what time it is... Offsets...
 This is horrible code example but hey, if it works...
@@ -135,7 +135,17 @@ This is horrible code example but hey, if it works...
 
 ```
 
+# Harvesting
 
+Well we just reverse the sequence above and use a slightly different offset fot the tool:
 
+```
+                print("Time to harvest!")    
+                if not self.paused:
+                    pag.click(cx, cy)  # Click middle of field again
+                    time.sleep(1) # Wait for tool to appear
+                    pag.moveTo(cx-110, cy-10, duration= 1) # Move mouse to harvest tool offset
+                    # Then same as planting movements...
+```
 
 
