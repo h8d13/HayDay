@@ -183,3 +183,9 @@ This helps get the whole field 98% of the time.
 
 
 Then the ```go_sell, sell, close``` are simple automation scripts that use the shop to unload storage. 
+The only thign was to make a loop that would replant directly (so we still have wheat, then sell as much as possible, or what's left) 
+
+Here is a preview in x16 speed. 
+
+https://github.com/user-attachments/assets/61e6eb0d-7297-40b4-b07c-09263a126e35
+
