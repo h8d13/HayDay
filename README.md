@@ -137,7 +137,7 @@ This is horrible code example but hey, if it works...
 
 # Harvesting
 
-Well we just reverse the sequence above and use a slightly different offset fot the tool:
+Well we just reverse the sequence above and use a slightly different offset for the tool:
 
 ```
                 print("Time to harvest!")    
