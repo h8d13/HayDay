@@ -32,13 +32,14 @@ To do this we can do a couple of things:
    
    ![alt text](https://github.com/h8d13/HayDay/blob/main/capcapcap.JPG)
    
-2. **Thresholding/Masking**
+2. **Thresholding/Masking/Countours**
 
    ![alt text](https://github.com/h8d13/HayDay/blob/main/capcapcapcap.JPG)
 
 3. **Shape matching**
 
-Then we can use cv2 built-in ```cv2.approxPolyDP```
+Then we can use cv2 built-in ```cv2.approxPolyDP``` 
+
 
 
 
