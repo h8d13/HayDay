@@ -62,9 +62,80 @@ epsilon = 0.02 * cv2.arcLength(largest, True)
 Then we can use cv2 built-in ```approx = cv2.approxPolyDP(largest, epsilon, True)``` 
 This is a complex algorithm but essentially will adapt the rectangle to fit the perspective of the game. 
 
-
-Note: 
-
+# Centroid
 Having a uneven amount of tiles is essential (see screenshot above, 21 tiles works because the center will be accurate, while 24 tiles will not as the center will be ambiguous) but could be corrceted easily by using square closest to viewport. 
+
+But I'm lazy:
+
+```
+M = cv2.moments(contour)
+if M["m00"] != 0:
+    cx = int(M["m10"] / M["m00"])
+    cy = int(M["m01"] / M["m00"])
+```
+
+M00 represents the total area
+M10 represents the sum of all x-coordinates
+M01 represents the sum of all y-coordinates
+
+Dividing first order moments by zero order moment gives the average (center) position
+
+# Automation
+
+Well now that we have a reliable middle point you know what time it is... Offsets...
+This is horrible code example but hey, if it works...
+
+```
+            # Planting phase
+            while True:
+                if not self.paused:
+                    pag.click(cx, cy)
+                    while self.paused:  # Wait if paused
+                        time.sleep(0.1)
+                    time.sleep(3)
+
+                    if not self.paused:
+                        wheat_x_offset=-100
+                        wheat_y_offset=-150
+                        pag.click((cx+(wheat_x_offset)), (cy+(wheat_y_offset))) # Wheat
+                        while self.paused:
+                            time.sleep(0.1)
+                        time.sleep(1)
+                        
+                        if not self.paused:
+                            pag.mouseDown() # START DRAGGING OVER COUNTOURS
+                            contour_points = contour.reshape(-1, 2)
+                            
+                            for point in contour_points:
+                                if self.paused:
+                                    pag.mouseUp()  # Release mouse if paused
+                                    while self.paused:
+                                        time.sleep(0.1)
+                                    pag.mouseDown()  # Resume mouse down when unpaused
+                                    
+
+                                x, y = point
+                                pag.moveTo(cx+35,cy-20, duration=1) # Add slight offset to make sure we drag low enough for planting to begin
+                                steps = 50
+                                for i in range(steps):
+                                    if self.paused:
+                                        break
+                                    ix = cx + (x - cx) * (i/steps)
+                                    iy = cy + (y - cy) * (i/steps)
+                                    
+                                    jiggle_x, jiggle_y = self.add_jiggle(int(ix), int(iy))
+                                    pag.moveTo(jiggle_x, jiggle_y, duration=0.1)
+
+                                if not self.paused:
+                                    pag.moveTo(int(x), int(y), duration=3)
+                                    time.sleep(0.5)
+
+                            pag.moveTo(cx,cy) # RELEASE AT MIDDLE SAFE POINT
+                            pag.mouseUp()
+
+```
+
+
+
 
 
