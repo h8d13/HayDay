@@ -148,4 +148,38 @@ Well we just reverse the sequence above and use a slightly different offset fot 
                     # Then same as planting movements...
 ```
 
+# Jiggle
 
+```
+    def add_jiggle(self, x, y, amplitude=45):
+        jiggle_x = x + np.random.randint(-amplitude, amplitude)
+        jiggle_y = y + np.random.randint(-amplitude, amplitude)*2 #MORE HORIZONTAL MOVEMENTS THAN VERTICAL
+        return jiggle_x, jiggle_y
+```
+
+This helps get the whole field 98% of the time. 
+
+# Inventory management
+
+```
+                print("Starting 2 minute timer until harvest...")
+                start_time = time.time()
+                elapsed_time = 0
+                wheat_harvest = 110 # Seconds - Time to plant
+                has_sold = False
+                while elapsed_time < wheat_harvest:  # 2 minutes WHEAT --offset 10 secs
+                    if not self.paused:
+                        elapsed_time = time.time() - start_time
+                        
+                        if not has_sold and not self.paused:
+                            go_sell()
+                            sell()
+                            close()
+                            has_sold=True
+                            pag.moveTo(cx, cy)
+                    # GO SELL DURING GROW
+                    time.sleep(0.1)
+```
+
+
+Then the ```go_sell, sell, close``` are simple automation scripts that use the shop to unload storage. 
