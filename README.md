@@ -4,7 +4,7 @@ HayDay Bot Python
 I've create this for two reasons: 
 
 1. The two other packages on GitHub for HayDay are viruses (bad ones at that). Please reset your computer if you've ran these programs at all. 
-2. It's a game that prays on your patience, so it's fun to automate.
+2. It's a game that preys on your patience, so it's fun to automate.
 
 Finally, I will not provide the full automation script as it's against terms of service. 
 I will however, show the full work to get there. Also thanks to @claritycoders for inspiration with the fishing bot. 
