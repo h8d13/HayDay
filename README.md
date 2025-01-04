@@ -189,6 +189,27 @@ Here is a preview in x16 speed.
 
 https://github.com/user-attachments/assets/61e6eb0d-7297-40b4-b07c-09263a126e35
 
+### Some tools to help you
+
+
+``` pip install pytautogui mouseinfo  opencv-python mss``` 
+
+Mouseinfo is super useful to determine exact coords create file: mpos.py:
+```
+import mouseinfo
+mouseinfo.MouseInfoWindow()
+``` 
+MSS for the screen capture loop. 
+And PyAutoGui for automation.
+```
+import pyautogui as pag
+
+pag.click(x,y)
+```
+
+
+
+----
 
 Hourly estimate coins: 2 000
 
