@@ -189,10 +189,13 @@ Here is a preview in x16 speed.
 
 https://github.com/user-attachments/assets/61e6eb0d-7297-40b4-b07c-09263a126e35
 
+----
+
+Hourly estimate coins: 2 000
+
 ### Some tools to help you
 
-
-``` pip install pytautogui mouseinfo  opencv-python mss``` 
+``` pip install pytautogui mouseinfo opencv-python mss``` 
 
 Mouseinfo is super useful to determine exact coords create file: mpos.py:
 ```
@@ -207,12 +210,13 @@ import pyautogui as pag
 pag.click(x,y)
 ```
 
+You can apply the same logic to remotely any game, triggerbot is a good example, while you shouldn't do it in multi-player is a fun project to code in a day. 
 
+Also can make neural network implementations based on visuals + controller module (possible actions)
+Your main issues will be 1. Working with PyTorch or TF 2. Finding a way to reward based on game state. 
 
-----
-
-Hourly estimate coins: 2 000
+I plan to release a couple of code pieces for Minecraft which is especially fun as you can interface with it directly in JavaScript using existing libraries. 
 
 Just for fun :D
-This software is provided for educational and research purposes only. The use of this software to automate or modify behavior in third-party applications may violate their terms of service. The authors assume no responsibility for any misuse or legal consequences
+This software is provided for educational and research purposes only. The use of this software to automate or modify behavior in third-party applications may violate their terms of service. The authors assume no responsibility for any misuse or legal consequences. It is intended purely for educational purposes and should only be done in secluded envrinoments. 
 
