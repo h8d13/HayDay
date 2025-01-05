@@ -203,7 +203,31 @@ import mouseinfo
 mouseinfo.MouseInfoWindow()
 ``` 
 MSS for the screen capture loop. 
-And PyAutoGui for automation.
+```
+import mss
+import os, time
+from datetime import datetime
+
+def capture_loop(x=100, y=100, w=500, h=300):
+   if not os.path.exists("shots"): os.makedirs("shots")
+   
+   with mss.mss() as sct:
+       monitor = {"top": y, "left": x, "width": w, "height": h}
+       try:
+           while True:
+               sct.shot(output=f"shots/shot_{datetime.now().strftime('%H%M%S')}.png", **monitor)
+               files = sorted([f for f in os.listdir("shots") if f.endswith('.png')])
+               if len(files) > 5:
+                   os.remove(f"shots/{files[0]}")
+               time.sleep(5)
+       except KeyboardInterrupt:
+           print("Stopped")
+
+if __name__ == "__main__":
+   capture_loop()
+```
+
+And PyAutoGui for automations.
 ```
 import pyautogui as pag
 
