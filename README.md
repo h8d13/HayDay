@@ -244,6 +244,8 @@ Your main issues will be 1. Working with PyTorch or TF 2. Finding a way to rewar
 
 I also plan to release a couple of code pieces for Minecraft which is especially fun as you can interface with it directly in JavaScript using existing libraries. 
 
+[Minecraft Simple Neural Network](https://github.com/h8d13/MC-NET/tree/main) 
+
 Just for fun :D
 This software is provided for educational and research purposes only. The use of this software to automate or modify behavior in third-party applications may violate their terms of service. The authors assume no responsibility for any misuse or legal consequences. It is intended purely for educational purposes and should only be done in secluded envrinoments. 
 
