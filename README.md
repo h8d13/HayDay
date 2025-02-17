@@ -197,6 +197,7 @@ Hourly estimate coins: 2 000
 
 ### Some tools to help you
 
+Look into scrcpy and adb for Android control, or emulate.
 ``` pip install pytautogui mouseinfo opencv-python mss``` 
 
 Mouseinfo is super useful to determine exact coords create file: mpos.py:
