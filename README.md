@@ -1,10 +1,8 @@
 # HayDay Farm
 HayDay Bot Python
 
-I've create this for two reasons: 
-⚠ The two other packages on GitHub for HayDay are viruses (bad ones at that). Please reset your computer if you've ran these programs at all. I have reported it to github...
-There might be a lot more of them.
-⚠
+⚠ The two (or more) other packages on GitHub for HayDay are viruses (bad ones at that). Please reset your computer if you've ran these programs at all. I have reported it to github...
+There might be a lot more of them. ⚠
 
 It's a game that preys on your patience, so it's fun to automate.
 
@@ -20,7 +18,6 @@ As per any automation problem we should break down the exercise:
 - Sell during growth (downtime)
 - Harvest
 - Repeat
-  
 
 # Soil detection
 
