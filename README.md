@@ -242,9 +242,6 @@ You can apply the same logic to remotely any game, triggerbot is a good example,
 Also can make neural network implementations based on visuals + controller module (possible actions)
 Your main issues will be 1. Working with PyTorch or TF 2. Finding a way to reward based on game state. 
 
-
-[Neural Networks Introduction: Snake AI, How machines outperform us consistently](https://www.nocodecenter.com/post/snake-ai-how-machines-can-outperform-us-consistently)
-
 I also plan to release a couple of code pieces for Minecraft which is especially fun as you can interface with it directly in JavaScript using existing libraries. And play with your monster creation! 
 
 [Minecraft Simple Neural Network](https://github.com/h8d13/MC-NET/tree/main) 
