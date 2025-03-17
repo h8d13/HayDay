@@ -10,6 +10,15 @@ It's a game that preys on your patience, so it's fun to automate.
 Finally, I will not provide the full automation script as it's against terms of service. 
 I will however, show the full work to get there. Also thanks to @claritycoders for inspiration with the fishing bot. 
 
+---
+Accessing a iOs or Android device
+
+For android you can use use scrcpy --fullscreen 
+[Scrcpy GitHub](https://github.com/Genymobile/scrcpy)
+
+Unsure about iOs specifics. 
+This would be your first hurdle. 
+
 As per any automation problem we should break down the exercise:
 
 ## InfiniFarm
@@ -234,13 +243,6 @@ import pyautogui as pag
 
 pag.click(x,y)
 ```
----
-Accessing a iOs or Android device
-
-For android you can use use scrcpy --fullscreen 
-[Scrcpy GitHub](https://github.com/Genymobile/scrcpy)
-
-Unsure about iOs specifics. 
 
 ---
 You can apply the same logic to remotely any game, triggerbot is a good example, while you shouldn't do it in multi-player is a fun project to code in a day. 
