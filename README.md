@@ -238,6 +238,8 @@ pag.click(x,y)
 Accessing a iOs or Android device
 
 For android you can use use scrcpy --fullscreen 
+[Scrcpy GitHub](https://github.com/Genymobile/scrcpy)
+
 Unsure about iOs specifics. 
 
 ---
