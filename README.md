@@ -11,13 +11,14 @@ Finally, I will not provide the full automation script as it's against terms of 
 I will however, show the full work to get there. Also thanks to @claritycoders for inspiration with the fishing bot. 
 
 ---
-Accessing a iOs or Android device
+## Accessing a iOS or Android device
 
 For android you can use use scrcpy --fullscreen 
 [Scrcpy GitHub](https://github.com/Genymobile/scrcpy)
 
-Unsure about iOs specifics. 
-This would be your first hurdle. 
+Unsure about iOS specifics.
+
+This would be your first hurdle, but you can also use bluestacks or any emulator that let's you run the game in full-screen with input.  
 
 As per any automation problem we should break down the exercise:
 
