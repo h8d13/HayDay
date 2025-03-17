@@ -234,7 +234,13 @@ import pyautogui as pag
 
 pag.click(x,y)
 ```
+---
+Accessing a iOs or Android device
 
+For android you can use use scrcpy --fullscreen 
+Unsure about iOs specifics. 
+
+---
 You can apply the same logic to remotely any game, triggerbot is a good example, while you shouldn't do it in multi-player is a fun project to code in a day. 
 
 Also can make neural network implementations based on visuals + controller module (possible actions)
