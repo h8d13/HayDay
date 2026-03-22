@@ -220,7 +220,7 @@ import mouseinfo
 mouseinfo.MouseInfoWindow()
 ``` 
 MSS for the screen capture loop. 
-```
+```python
 import mss
 import os, time
 from datetime import datetime
