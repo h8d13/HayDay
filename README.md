@@ -44,7 +44,7 @@ To do this we can do a couple of things:
 
 How to do it: 
 
-```
+```python
 class SoilDetector
   def __init__(self):
       template_path = os.path.join(os.path.dirname(__file__), 'templates', 'soil.JPG')
@@ -54,13 +54,13 @@ class SoilDetector
   def detect(self, screen):
       diff = np.abs(screen - self.template_color)
       current_mask = (np.mean(diff, axis=2) < self.color_threshold).astype(np.uint8) * 255
-````
+```
    
 2. **Thresholding/Masking/Countours**
 
    ![alt text](https://github.com/h8d13/HayDay/blob/main/capcapcapcap.JPG)
 
-```
+```python
 contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 largest = max(contours, key=cv2.contourArea)
 epsilon = 0.02 * cv2.arcLength(largest, True)
@@ -77,7 +77,7 @@ Having a uneven amount of tiles is essential (see screenshot above, 21 tiles wor
 
 But I'm lazy:
 
-```
+```python
 M = cv2.moments(contour)
 if M["m00"] != 0:
     cx = int(M["m10"] / M["m00"])
@@ -95,7 +95,7 @@ Dividing first order moments by zero order moment gives the average (center) pos
 Well now that we have a reliable middle point you know what time it is... Offsets...
 This is horrible code example but hey, if it works...
 
-```
+```python
             # Planting phase
             while True:
                 if not self.paused:
@@ -149,7 +149,7 @@ This is horrible code example but hey, if it works...
 
 Well we just reverse the sequence above and use a slightly different offset for the tool:
 
-```
+```python
                 print("Time to harvest!")    
                 if not self.paused:
                     pag.click(cx, cy)  # Click middle of field again
@@ -160,7 +160,7 @@ Well we just reverse the sequence above and use a slightly different offset for 
 
 # Jiggle
 
-```
+```python
     def add_jiggle(self, x, y, amplitude=45):
         jiggle_x = x + np.random.randint(-amplitude, amplitude)
         jiggle_y = y + np.random.randint(-amplitude, amplitude)*2 #MORE HORIZONTAL MOVEMENTS THAN VERTICAL
@@ -171,7 +171,7 @@ This helps get the whole field 98% of the time.
 
 # Inventory management
 
-```
+```python
                 print("Starting 2 minute timer until harvest...")
                 start_time = time.time()
                 elapsed_time = 0
@@ -192,7 +192,13 @@ This helps get the whole field 98% of the time.
 ```
 
 
-Then the ```go_sell, sell, close``` are simple automation scripts that use the shop to unload storage. 
+Then the 
+
+```python
+go_sell, sell, close
+```
+
+Are simple automation scripts that use the shop to unload storage. 
 The main thing was to make a loop that would replant directly (so we still have wheat, then sell as much as possible, or what's left) 
 
 Here is a preview in x16 speed. 
@@ -209,7 +215,7 @@ Look into scrcpy and adb for Android control, or emulate.
 ``` pip install pytautogui mouseinfo opencv-python mss``` 
 
 Mouseinfo is super useful to determine exact coords create file: mpos.py:
-```
+```python
 import mouseinfo
 mouseinfo.MouseInfoWindow()
 ``` 
@@ -239,7 +245,7 @@ if __name__ == "__main__":
 ```
 
 And PyAutoGui for automations.
-```
+```python
 import pyautogui as pag
 
 pag.click(x,y)
